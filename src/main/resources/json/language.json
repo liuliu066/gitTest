@@ -1,0 +1,377 @@
+[
+  {
+    "itemName": "英语",
+    "itemValue": "02",
+    "level": [
+      {
+        "itemName": "英语应用能力考试A级",
+        "itemValue": "01"
+      },
+      {
+        "itemName": "英语应用能力考试B级",
+        "itemValue": "02"
+      },
+      {
+        "itemName": "剑桥商务英语初级",
+        "itemValue": "03"
+      },
+      {
+        "itemName": "剑桥商务英语中级",
+        "itemValue": "04"
+      },
+      {
+        "itemName": "剑桥商务英语高级",
+        "itemValue": "05"
+      },
+      {
+        "itemName": "大学英语三级",
+        "itemValue": "06"
+      },
+      {
+        "itemName": "大学英语四级",
+        "itemValue": "07"
+      },
+      {
+        "itemName": "大学英语六级",
+        "itemValue": "08"
+      },
+      {
+        "itemName": "英语专业四级",
+        "itemValue": "09"
+      },
+      {
+        "itemName": "英语专业八级",
+        "itemValue": "10"
+      },
+      {
+        "itemName": "雅思3.0",
+        "itemValue": "11"
+      },
+      {
+        "itemName": "雅思4.0",
+        "itemValue": "12"
+      },
+      {
+        "itemName": "雅思4.5",
+        "itemValue": "13"
+      },
+      {
+        "itemName": "雅思5.0",
+        "itemValue": "14"
+      },
+      {
+        "itemName": "雅思5.5",
+        "itemValue": "15"
+      },
+      {
+        "itemName": "雅思6.0",
+        "itemValue": "16"
+      },
+      {
+        "itemName": "雅思6.5",
+        "itemValue": "17"
+      },
+      {
+        "itemName": "雅思7.0",
+        "itemValue":"18"
+      },
+      {
+        "itemName": "雅思7.5",
+        "itemValue": "19"
+      },
+      {
+        "itemName": "雅思8.0",
+        "itemValue": "20"
+      },
+      {
+        "itemName": "全国英语等级考试1级B",
+        "itemValue":"21"
+      },
+      {
+        "itemName": "全国英语等级考试1级",
+        "itemValue": "22"
+      },
+      {
+        "itemName": "全国英语等级考试2级",
+        "itemValue": "23"
+      },
+      {
+        "itemName": "全国英语等级考试3级",
+        "itemValue": "24"
+      },
+      {
+        "itemName": "全国英语等级考试4级",
+        "itemValue": "25"
+      },
+      {
+        "itemName": "全国英语等级考试5级",
+        "itemValue": "26"
+      },
+      {
+        "itemName": "托福51-60",
+        "itemValue": "27"
+      },
+      {
+        "itemName": "托福61-70",
+        "itemValue": "28"
+      },
+      {
+        "itemName": "托福71-80",
+        "itemValue": "29"
+      },
+      {
+        "itemName": "托福81-90",
+        "itemValue": "30"
+      },
+      {
+        "itemName": "托福91-100",
+        "itemValue": "31"
+      },
+      {
+        "itemName": "托福101-110",
+        "itemValue": "32"
+      },
+      {
+        "itemName": "托福111-120",
+        "itemValue": "33"
+      },
+      {
+        "itemName": "托业A级",
+        "itemValue": "34"
+      },
+      {
+        "itemName": "托业B级",
+        "itemValue": "35"
+      },
+      {
+        "itemName": "托业C级",
+        "itemValue": "36"
+      },
+      {
+        "itemName": "托业D级",
+        "itemValue": "37"
+      },
+      {
+        "itemName": "托业E级",
+        "itemValue": "38"
+      },
+      {
+        "itemName": "职称英语A级",
+        "itemValue": "39"
+      },
+      {
+        "itemName": "职称英语B级",
+        "itemValue": "40"
+      },
+      {
+        "itemName": "职称英语C级",
+        "itemValue": "41"
+      }
+    ]
+  },
+  {
+    "itemName": "日语",
+    "itemValue": "03",
+    "level": [
+      {
+        "itemName": "大学日语二级",
+        "itemValue": "42"
+      },
+      {
+        "itemName": "大学日语四级",
+        "itemValue": "43"
+      },
+      {
+        "itemName": "日语能力测试N1级",
+        "itemValue": "44"
+      },
+      {
+        "itemName": "日语能力测试N2级",
+        "itemValue": "45"
+      },
+      {
+        "itemName": "日语能力测试N3级",
+        "itemValue": "46"
+      },
+      {
+        "itemName": "日语能力测试N4级",
+        "itemValue": "47"
+      },
+      {
+        "itemName": "日语能力测试N5级",
+        "itemValue": "48"
+      },
+      {
+        "itemName": "日语等级考试",
+        "itemValue": "49"
+      }
+    ]
+  },
+  {
+    "itemName": "俄语",
+    "itemValue": "04",
+    "level": [
+      {
+        "itemName": "大学俄语四级",
+        "itemValue": "50"
+      },
+      {
+        "itemName": "大学俄语六级",
+        "itemValue": "51"
+      },
+      {
+        "itemName": "对外俄语等级3级",
+        "itemValue": "52"
+      },
+      {
+        "itemName": "俄语国家水平考试2级",
+        "itemValue": "53"
+      },
+      {
+        "itemName": "俄语专业四级",
+        "itemValue": "54"
+      },
+      {
+        "itemName": "俄语专业八级",
+        "itemValue": "55"
+      }
+    ]
+  },
+  {
+    "itemName": "葡萄牙语",
+    "itemValue": "05",
+    "level": [
+      {
+        "itemName": "葡萄牙等级考试A1",
+        "itemValue": "56"
+      },
+      {
+        "itemName": "葡萄牙等级考试A2",
+        "itemValue": "57"
+      },
+      {
+        "itemName": "葡萄牙等级考试B1",
+        "itemValue": "58"
+      },
+      {
+        "itemName": "葡萄牙等级考试B2",
+        "itemValue": "59"
+      },
+      {
+        "itemName": "葡萄牙等级考试C1",
+        "itemValue": "60"
+      },
+      {
+        "itemName": "葡萄牙等级考试C2",
+        "itemValue": "61"
+      }
+    ]
+  },
+  {
+    "itemName": "西班牙语",
+    "itemValue": "06",
+    "level": [
+      {
+        "itemName": "西班牙语DELE考试A1",
+        "itemValue": "62"
+      },
+      {
+        "itemName": "西班牙语DELE考试A2",
+        "itemValue": "63"
+      },
+      {
+        "itemName": "西班牙语DELE考试B1",
+        "itemValue": "64"
+      },
+      {
+        "itemName": "西班牙语DELE考试B2",
+        "itemValue": "65"
+      },
+      {
+        "itemName": "西班牙语DELE考试C1",
+        "itemValue": "66"
+      },
+      {
+        "itemName": "西班牙语DELE考试C2",
+        "itemValue": "67"
+      }
+    ]
+  },
+  {
+    "itemName": "朝鲜语",
+    "itemValue": "07",
+    "level": [
+      {
+        "itemName": "TOPIK能力考试3级",
+        "itemValue": "68"
+      },
+      {
+        "itemName": "TOPIK能力考试4级",
+        "itemValue": "69"
+      },
+      {
+        "itemName": "TOPIK能力考试5级",
+        "itemValue": "70"
+      }
+    ]
+  },
+  {
+    "itemName": "法语",
+    "itemValue": "08",
+    "level": [
+      {
+        "itemName": "法语专业四级",
+        "itemValue": "71"
+      },
+      {
+        "itemName": "法语专业八级",
+        "itemValue": "72"
+      }
+    ]
+  },
+  {
+    "itemName": "阿拉伯语",
+    "itemValue": "09",
+    "level": [
+      {
+        "itemName": "阿拉伯语专业四级",
+        "itemValue": "73"
+      }
+    ]
+  },
+  {
+    "itemName": "德语",
+    "itemValue": "10",
+    "level": [
+      {
+        "itemName": "大学德语四级",
+        "itemValue": "74"
+      },
+      {
+        "itemName": "大学德语六级",
+        "itemValue": "75"
+      },
+      {
+        "itemName": "欧标A2.1",
+        "itemValue": "76"
+      },
+      {
+        "itemName": "欧标B2.2",
+        "itemValue": "77"
+      },
+      {
+        "itemName": "德语DSH1",
+        "itemValue": "78"
+      },
+      {
+        "itemName": "德语DSH2",
+        "itemValue": "79"
+      },
+      {
+        "itemName": "德语DSH3",
+        "itemValue": "80"
+      }
+    ]
+  }
+]
+
