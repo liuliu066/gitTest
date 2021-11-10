@@ -1,9 +1,11 @@
 package com.test.study;
 
+import io.swagger.models.auth.In;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 
 /**
@@ -41,6 +43,12 @@ public class CollectionTest {
         }
     }
 
+
+
+    @Test
+    public void Test003(){
+//<Integer> qq = new
+    }
 
 
 
