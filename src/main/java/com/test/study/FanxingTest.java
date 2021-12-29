@@ -1,5 +1,6 @@
 package com.test.study;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.Test;
 
 import java.util.*;
@@ -85,5 +86,22 @@ public class FanxingTest {
         }
 
 
+    }
+
+
+
+    public List<String> test001(Student student){
+
+        List<String> aa = new ArrayList<>();
+        int age = student.getAge();
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("aa" ,age);
+
+        List a = new ArrayList();
+        Object o = a.get(age);
+
+        List list = a.subList(age, 2);
+
+        return list;
     }
 }

@@ -3,10 +3,12 @@ package com.test.study;
 
 import org.junit.Test;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatterBuilder;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,7 +16,7 @@ import java.util.regex.Pattern;
  * @author lwh
  * @date 2021/10/22 14:28
  */
-public class PhoneTest {
+public class CheckTest {
 
     @Test
     public void test00(){
@@ -174,6 +176,45 @@ public class PhoneTest {
             return false;
         }
     }
+
+
+    @Test
+    public void dateTimeTransfer(){
+
+        String datestr = "2020-08-31";
+        String newdate = "";
+        try {
+            Date date = new SimpleDateFormat("yyyy-MM-dd").parse(datestr);
+            Calendar calendar = new GregorianCalendar();
+            calendar.setTime(date);
+            calendar.add(Calendar.DATE, 1);
+            date = calendar.getTime();
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+            newdate = format.format(date);
+            System.out.println(newdate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @Test
+    public void dateTimeTransfer111(){
+
+        //2020-08-31  2012-01-11
+        String datestr = "2022-08-31";
+        String newdate = "2020-11-11";
+        int i = datestr.compareTo(newdate);
+        System.out.println(i);
+        Date date = new Date();
+
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+        String now = format.format(date); //2013-01-14
+        System.out.println(now);
+
+    }
+
 
 
 }

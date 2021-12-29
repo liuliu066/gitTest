@@ -1,6 +1,9 @@
 package com.test.inherit;
 
-import com.test.inherit.test1;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class testAA {
 
@@ -10,4 +13,20 @@ public class testAA {
 
 
     }
+
+
+    @Test
+    public void listForEachTest(){
+        List<Integer> list = new ArrayList<>();
+        int a=1;
+        list.add(11);
+        list.add(22);
+        list.add(33);
+
+        list.forEach(integer -> {
+
+        });
+
+    }
+
 }

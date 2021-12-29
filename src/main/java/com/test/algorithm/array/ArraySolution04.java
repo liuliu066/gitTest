@@ -1,5 +1,6 @@
 package com.test.algorithm.array;
 
+import com.test.abstract1.Person;
 import org.apache.commons.collections4.CollectionUtils;
 import org.junit.Test;
 
@@ -49,6 +50,38 @@ public class ArraySolution04 {
         }
         System.out.println(list);
 
+
+    }
+
+
+
+
+    @Test
+    public void test001(){
+       class Person{
+           String name;
+
+           public void setName(String name) {
+               this.name = name;
+           }
+
+           public String getName() {
+               return name;
+           }
+       }
+       Person person = new Person();
+       person.setName("2");
+       String a = new String("2");
+
+        String ss = "2";
+        String ee ="2";
+//        for (int i= 0; i<100;i++){
+//            System.out.println(ss== ee);
+//        }
+        System.out.println(person.getName());
+        System.out.println(person.getName()== "2");
+        System.out.println(a);
+        System.out.println(a=="2");
 
     }
 }
