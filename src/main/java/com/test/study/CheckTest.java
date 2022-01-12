@@ -197,6 +197,14 @@ public class CheckTest {
         }
     }
 
+    @Test
+    public void testPlace(){
+        String aa= "111";
+        String[] jiguan =aa.split("-");
+        System.out.println(jiguan.length);
+        System.out.println(jiguan[0]);
+    }
+
 
     @Test
     public void dateTimeTransfer111(){
@@ -212,6 +220,10 @@ public class CheckTest {
 
         String now = format.format(date); //2013-01-14
         System.out.println(now);
+
+    }
+
+    public  void testFan(){
 
     }
 
