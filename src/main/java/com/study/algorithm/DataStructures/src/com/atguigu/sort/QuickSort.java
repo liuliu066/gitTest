@@ -7,7 +7,7 @@ import java.util.Date;
 public class QuickSort {
 
 	public static void main(String[] args) {
-		//int[] arr = {-9,78,0,23,-567,70, -1,900, 4561};
+//		int[] arr = {-5,-7,0,23,-9,70, -1,-2, -4};
 		
 		//测试快排的执行速度
 		// 创建要给80000个的随机的数组
@@ -27,7 +27,7 @@ public class QuickSort {
 		Date data2 = new Date();
 		String date2Str = simpleDateFormat.format(data2);
 		System.out.println("排序前的时间是=" + date2Str);
-		//System.out.println("arr=" + Arrays.toString(arr));
+//		System.out.println("arr=" + Arrays.toString(arr));
 	}
 
 	public static void quickSort(int[] arr,int left, int right) {
@@ -58,7 +58,7 @@ public class QuickSort {
 			arr[l] = arr[r];
 			arr[r] = temp;
 			
-			//如果交换完后，发现这个arr[l] == pivot值 相等 r--， 前移
+			//如果交换完后，发现这个arr[l] == pivot值 相等 r--， 前移,这个就是相等的时候移动另一个指针。
 			if(arr[l] == pivot) {
 				r -= 1;
 			}
@@ -68,10 +68,10 @@ public class QuickSort {
 			}
 		}
 		
-		// 如果 l == r, 必须l++, r--, 否则为出现栈溢出
+		// 如果 l == r, 必须l++, r--, 否则为出现栈溢出，如果不修改得话，左右递归会出现死循环，从而栈溢出。
 		if (l == r) {
-			l += 1;
-			r -= 1;
+			l += 1;//左边+1
+			r -= 1;//右边-1便于左右递归。要不肯定会有一个满足下面得左右递归一直递归循环下去
 		}
 		//向左递归
 		if(left < r) {

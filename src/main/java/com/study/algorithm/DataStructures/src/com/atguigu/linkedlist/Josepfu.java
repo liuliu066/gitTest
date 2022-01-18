@@ -1,19 +1,38 @@
 package com.study.algorithm.DataStructures.src.com.atguigu.linkedlist;
 
+import org.junit.Test;
+
 public class Josepfu {
 
 	public static void main(String[] args) {
 		// 测试一把看看构建环形链表，和遍历是否ok
-		CircleSingleLinkedList circleSingleLinkedList = new CircleSingleLinkedList();
-		circleSingleLinkedList.addBoy(125);// 加入5个小孩节点
-		circleSingleLinkedList.showBoy();
-		
-		//测试一把小孩出圈是否正确
-		circleSingleLinkedList.countBoy(10, 20, 125); // 2->4->1->5->3
-		//String str = "7*2*2-5+1-5+3-3";
+//		CircleSingleLinkedList circleSingleLinkedList = new CircleSingleLinkedList();
+//		circleSingleLinkedList.addBoy(125);// 加入5个小孩节点
+//		circleSingleLinkedList.showBoy();
+//
+//		//测试一把小孩出圈是否正确
+//		circleSingleLinkedList.countBoy(10, 20, 125); // 2->4->1->5->3
+//		//String str = "7*2*2-5+1-5+3-3";
+
+
+		Josepfu josepfu = new Josepfu();
+		josepfu.testAaa();
+//		this.testAaa();
+
+
 	}
 
+
+	public void  testAaa(){
+		Boy curBoy=null;
+		Boy aa = new Boy(8);
+		Boy boy = new Boy(1);
+		curBoy = boy;//这个指向的是物理地址
+		curBoy.setNext(aa);
+		System.out.println(curBoy==boy);//true
+	}
 }
+
 
 // 创建一个环形的单向链表
 class CircleSingleLinkedList {

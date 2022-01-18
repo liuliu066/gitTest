@@ -41,7 +41,7 @@ public class LocalVariablesTest {
         dateP = null;
         name2 = "songhongkang";
         double weight = 130.5;//占据两个slot
-        char gender = '男';
+//        char gender = '男';
         return dateP + name2;
     }
 
