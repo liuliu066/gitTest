@@ -7,14 +7,14 @@ import java.util.Date;
 public class MergetSort {
 
 	public static void main(String[] args) {
-		//int arr[] = { 8, 4, 5, 7, 1, 3, 6, 2 }; //
+		int arr[] = { 8, 4, 5, 7, 1, 3, 6, 2 }; //
 		
 		//测试快排的执行速度
 		// 创建要给80000个的随机的数组
-		int[] arr = new int[8000000];
-		for (int i = 0; i < 8000000; i++) {
-			arr[i] = (int) (Math.random() * 8000000); // 生成一个[0, 8000000) 数
-		}
+//		int[] arr = new int[8000000];
+//		for (int i = 0; i < 8000000; i++) {
+//			arr[i] = (int) (Math.random() * 8000000); // 生成一个[0, 8000000) 数
+//		}
 		System.out.println("排序前");
 		Date data1 = new Date();
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -60,6 +60,8 @@ public class MergetSort {
 		int i = left; // 初始化i, 左边有序序列的初始索引
 		int j = mid + 1; //初始化j, 右边有序序列的初始索引
 		int t = 0; // 指向temp数组的当前索引
+
+		System.out.printf("合并得左边：%d右边为： %d\n", left, right);
 		
 		//(一)
 		//先把左右两边(有序)的数据按照规则填充到temp数组

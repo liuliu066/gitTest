@@ -75,13 +75,25 @@
             <version>2.7.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>testUtils</groupId>
+            <artifactId>testUtils</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/stdp-web-spring-boot-starter-1.0.0.jar</systemPath>
+        </dependency>
+
         <!--lombok用来简化实体类：需要安装lombok插件-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.10</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.1.6.RELEASE</version>
+        </dependency>
         <!--xls-->
         <dependency>
             <groupId>org.apache.poi</groupId>
