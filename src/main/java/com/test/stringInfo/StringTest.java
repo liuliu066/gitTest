@@ -1,8 +1,12 @@
 package com.test.stringInfo;
 
+import com.test.test.Student;
 import org.junit.Test;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author lwh
@@ -166,4 +170,63 @@ public class StringTest {
         sb.reverse();
         System.out.println(sb);
     }
+
+    @Test
+    public void  test11111111(){
+
+        String aa= "100023727";
+        String cc= "100020027";
+        String ss = "19999000300980137";
+        System.out.println(aa.substring(5,9));
+        String substring = cc.substring(5, 9);
+        String qq = ss.substring(9, 13);
+        System.out.println(qq);
+        Long bb= Long.valueOf(substring);
+        System.out.println(bb);
+    }
+
+
+    @Test
+    public void  test11221(){
+//        System.out.println(checkMobilePhone("09949140411"));
+
+        Long aa= 11111l;
+        Long bb= 1111l;
+        Long cc= 111l;
+        Long dd= 111l;
+        long ee = 11111l;
+//        System.out.println(aa != bb);
+        System.out.println(aa ==bb);
+        System.out.println(cc ==dd);
+        System.out.println(aa ==ee);
+    }
+
+    @Test
+    public void  tesr11(){
+        checkMobilePhone("19949140411");
+    }
+
+    private String checkMobilePhone(String mobilePhone) {
+        if (StringUtils.isEmpty(mobilePhone)) {
+            return "手机号不能为空！";
+        }
+//        String regex = "^(0|86|17951)?(13[0-9]|15[012356789]|17[3678]|18[0-9]|14[57])[0-9]{8}$";
+        String regex = "^((13[0-9])|(14[5,7,9])|(15([0-3]|[5-9]))|(17[0,1,3,5,6,7,8])|(18[0-9])|(19[8|9])|(16[6]))\\d{8}$";
+        if (mobilePhone.length() != 11) {
+            return "手机号应为11位数";
+        } else {
+            Pattern p = Pattern.compile(regex);
+            Matcher m = p.matcher(mobilePhone);
+            boolean isMatch = m.matches();
+            if (isMatch) {
+                return "";
+            } else {
+                return "手机号" + mobilePhone + "错误格式！";
+            }
+        }
+
+    }
+
+
+
 }
