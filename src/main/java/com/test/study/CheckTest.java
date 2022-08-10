@@ -43,6 +43,16 @@ public class CheckTest {
     }
 
 
+    @Test
+    public void test0111(){
+
+        List<String> strings = new ArrayList<>();
+        System.out.println(strings);
+        strings.get(0);
+        System.out.println();
+
+    }
+
     /**
      * 手机号校验
      */

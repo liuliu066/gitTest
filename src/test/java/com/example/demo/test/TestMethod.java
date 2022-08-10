@@ -1,8 +1,16 @@
 package com.example.demo.test;
 
 import org.junit.Test;
+import org.openxmlformats.schemas.spreadsheetml.x2006.main.STSourceType;
 import org.springframework.util.StringUtils;
 
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /**
@@ -50,13 +58,11 @@ public class TestMethod {
 
         Map map = new HashMap();
         map.put("11",11);
-        map.put("22",22);
+        map.put("11",22);
         map.put("33",33);
-        map.put("44",44);
-
+        map.put("11",11);
         Set set = map.entrySet();
-        
-
+        System.out.println(set);
 
     }
 
@@ -133,9 +139,12 @@ public class TestMethod {
 
 
         List<Map> mapList = new ArrayList<>();
+        System.out.println(mapList);
         mapList.add(map1);
         mapList.add(map2);
-        System.out.println(mapList);
+        System.out.println("12312"+mapList);
+        Object oo = mapList;
+        System.out.println("231"+oo);
 
         Map<Map,Map> map = new HashMap();
 
@@ -145,7 +154,43 @@ public class TestMethod {
     }
 
 
+    /**
+     * 获取本地电脑ip地址
+     * @return
+     */
+    public static String getLocalIpAddress(){
+        InetAddress ip;      //用于获取IP(因为是静态的所以不需要使用new来实例化
+        String IP = null;    //用于返回IP
+        try {
+            ip = Inet4Address.getLocalHost();    //获取IP
+            IP = ip.getHostAddress();        	//以字符串形式存储IP
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return IP;
+    }
 
+    @Test
+    public void  testGetIp(){
+        System.out.println(getLocalIpAddress());
+    }
+
+    @Test
+    public void  testGetIp1(){
+        System.out.println(turnInstantToDate(Instant.now()));
+    }
+
+
+    public static  String turnInstantToDate(Instant time) {
+        String formatStr = "";
+        if (null == time) {
+            return formatStr;
+        }
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH:mm:ss");
+        ZoneId zone = ZoneId.systemDefault();
+        formatStr = dateTimeFormatter.format(LocalDateTime.ofInstant(time, zone));
+        return formatStr;
+    }
 
 
 
