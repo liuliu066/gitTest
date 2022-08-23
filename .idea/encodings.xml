@@ -10,6 +10,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/study/algorithm/DataStructures/src/com/atguigu/recursion/Queue8.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/study/algorithm/DataStructures/src/com/atguigu/recursion/RecursionTest.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/study/algorithm/DataStructures/src/com/atguigu/reversepolishcal/ReversePolishMultiCalc.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/test/test/bo/IamOrganizationBo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>

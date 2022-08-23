@@ -76,6 +76,13 @@
         </dependency>
 
         <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.9.0</version>
+        </dependency>
+
+
+        <dependency>
             <groupId>testUtils</groupId>
             <artifactId>testUtils</artifactId>
             <version>1.0</version>
@@ -161,6 +168,34 @@
             <artifactId>easypoi-annotation</artifactId>
             <version>3.1.0</version>
         </dependency>
+
+
+
+        <!--hutool jar-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.0.7</version>
+        </dependency>
+
+        <!--考虑到Hutool的非强制依赖性，因此zxing需要用户自行引入-->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.83</version>
+        </dependency>
+
     </dependencies>
 
 </project>

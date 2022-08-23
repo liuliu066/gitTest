@@ -1,4 +1,4 @@
-package com.study.thread;
+package com.study.thread.threadTest;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
