@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class test001 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
         Date date = new Date();
@@ -20,7 +20,7 @@ public class test001 {
     }
 
     /**
-     * mD5¼ÓÃÜ
+     * mD5ï¿½ï¿½ï¿½ï¿½
      *
      * @return
      */

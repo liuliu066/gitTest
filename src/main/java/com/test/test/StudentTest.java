@@ -30,6 +30,14 @@ public class StudentTest {
 
     }
 
+    @Test
+    public void test001(){
+        Student student = new Student();
+        student.setAge(1);
+        student.setLeader(true);
+        System.out.println(student);
+    }
+
 
 
 }
