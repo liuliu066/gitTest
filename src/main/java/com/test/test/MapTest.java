@@ -1,11 +1,13 @@
 package com.test.test;
 
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.text.replacer.StrReplacer;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
+import com.study.Utils.InstantToStringUtils;
 import com.study.Utils.StringToInstantUtils;
 import com.test.test.bo.IamOrganizationBo;
 import io.swagger.models.auth.In;
@@ -21,6 +23,7 @@ import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import static com.study.Utils.InstantToStringUtils.turnInstant;
 import static com.study.Utils.InstantToStringUtils.turnInstantWithDay;
 
 /**
@@ -737,6 +740,33 @@ public class MapTest {
 
         List<String> collect1 = studentList.stream().map(item -> item.getName()).distinct().collect(Collectors.toList());
         System.out.println(collect1);
+        System.out.println("--------------------");
+
+        List<String> q = new ArrayList<>();
+        q.add("111");
+        q.add("112");
+        long count = studentList.stream().filter(item -> q.contains(item.getName())).count();
+        int aaa= (int) (111-count);
+        System.out.println(aaa);
+        System.out.println(count);
+
+    }
+
+    @Test
+    public void tes121t11(){
+
+           List<String> directorLevelAboveList = new ArrayList<String>(){
+            {
+                add("EmpInfoConstants.CHAIRMAN");
+                add("EmpInfoConstants11.CHAIRMAN");
+                add("EmpInfoConst232ants.CHAIRMAN");
+                add("EmpInfoCons332tants.CHAIRMAN");
+
+            }
+        };
+        System.out.println(directorLevelAboveList);
+
+
 
     }
 
@@ -751,7 +781,175 @@ public class MapTest {
 
     }
 
+    @Test
+    public void  test1111322411(){
+        System.out.println( DateUtil.format(new Date(),"yyyy-MM-dd HH:mm:ss"));
 
+        List<String> degreeList = new ArrayList<>();
+
+        degreeList.add("01");
+        degreeList.add("03");
+        degreeList.add("04");
+        degreeList.add("99");
+        for(String a:degreeList){
+            System.out.println(a);
+            if (a.equals("04")){
+                System.out.println(11111);
+                break;
+            }
+        }
+    }
+
+    @Test
+    public void  test122411(){
+//        2022-11-28T07:11:03.875Z
+        Instant now = Instant.now();
+        System.out.println(now);
+        String s = turnInstant(now);
+        System.out.println(s);
+
+        System.out.println("2222222222222");
+        Instant instant = StringToInstantUtils.stringToInstant("2022-11-11");
+
+
+        System.out.println(instant);
+
+
+    }
+
+    @Test
+    public void test011111111101(){
+        System.out.println(UUID.randomUUID().toString().replace("-", "").toLowerCase());
+        System.out.println(DateUtil.format(new Date(), "yyyy年MM月dd日"));
+    }
+
+
+    @Test
+    public void  test122121411(){
+//        2022-11-28T07:11:03.875Z
+       List<String> list = new ArrayList<>();
+       list.add("11");
+       list.add("22");
+       list.add("33");
+        System.out.println(list.contains(""));
+        System.out.println(list.contains(null));
+        System.out.println(list.contains(11));
+        System.out.println(list.contains("11"));
+        System.out.println("----------------------");
+        System.out.println(isCheck());
+
+    }
+
+    @Test
+    public void  test122121222411(){
+//        2022-11-28T07:11:03.875Z
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("aa");
+        stringBuffer.append("22");
+        stringBuffer.append("33");
+        stringBuffer.append("--");
+        System.out.println(stringBuffer.toString());
+
+
+    }
+    @Test
+    public void  test2122121222411(){
+//        2022-11-28T07:11:03.875Z
+
+
+        for (int i = 0; i <0; i++) {
+            System.out.println(111);
+        }
+        System.out.println(333);
+
+
+
+    }
+
+    private boolean isCheck(){
+        List<String> list = new ArrayList<>();
+        list.add("11");
+        list.add("22");
+        list.add("33");
+
+        List<String> list1 = new ArrayList<>();
+        list1.add("22");
+        list1.add("33");
+        list1.add("11");
+        for (String s:list1){
+            if (!list.contains(s)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
+    @Test
+    public void test001111(){
+//        String orgPath = "1999937272838";
+        String orgPath = "19999001272838";
+        if (null != orgPath && orgPath.length() >= 5) {
+
+            Long orgId = Long.valueOf(orgPath.substring(5, 9));
+            System.out.println(orgId);
+        }
+
+
+        Map<Long, Instant> orgIdMap = new HashMap<>();
+        orgIdMap.put(11L,Instant.now());
+        orgIdMap.put(22L,Instant.now());
+        orgIdMap.put(33L,Instant.now());
+        System.out.println(orgIdMap);
+
+        Instant instant = orgIdMap.get(11l);
+        if (instant == null){
+            System.out.println("111111");
+        }
+        Instant instant1 = orgIdMap.get(111l);
+        if (instant1 == null){
+            System.out.println("112221111");
+        }
+        System.out.println(instant1);
+
+    }
+
+
+    @Test
+    public void test002221(){
+        String isLeader = "1";
+        System.out.println(isLeader == "1");
+
+        Map<String,String> map = new HashMap<>();
+        map.put("11","12");
+        map.put("2","132");
+        map.put("44","121");
+        map.put("5","122");
+        System.out.println(map);
+
+
+
+    }
+
+
+    @Test
+    public void test1112(){
+        String endTime = getEndTime(null, null);
+        System.out.println(endTime);
+
+        System.out.println(null +"");
+
+
+    }
+
+    private String getEndTime(Long orgId,Map<Long, Instant> orgIdMap){
+        Instant endTime = Instant.now();
+        if (orgIdMap != null && !orgIdMap.isEmpty() && orgId !=null &&  orgIdMap.get(orgId) != null){
+            endTime = orgIdMap.get(orgId);
+        }
+        return  InstantToStringUtils.turnInstantWithDay(endTime);
+    }
 
 
     @Test
