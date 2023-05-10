@@ -1,0 +1,20 @@
+CREATE TABLE `t_hr_emp_import_direct` (
+                                            `IMPORT_DIRECT_ID` bigint(20) NOT NULL COMMENT '导入上级id',
+                                            `USER_ID` varchar(32) DEFAULT NULL COMMENT '用户ID',
+                                            `EMP_NO` varchar(16) DEFAULT NULL COMMENT '工号',
+                                            `FULL_NAME` varchar(50) DEFAULT NULL COMMENT '姓名',
+                                            `DIRECT_SUPERIOR_USER_ID` varchar(32) DEFAULT NULL COMMENT '直接上级用户ID',
+                                            `DIRECT_SUPERIOR_EMP_NO` varchar(16) DEFAULT NULL COMMENT '直接上级工号',
+                                            `DIRECT_SUPERIOR_FULL_NAME` varchar(50) DEFAULT NULL COMMENT '直接上级姓名',
+                                            `IMPORT_TYPE` varchar(32) DEFAULT NULL COMMENT '导入类型',
+                                            `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+                                            `CREATE_USER_ID` varchar(32) DEFAULT NULL COMMENT '创建人ID',
+                                            `CREATE_TIME` datetime DEFAULT NULL COMMENT '创建时间',
+                                            `CREATE_USER_NAME` varchar(50) DEFAULT NULL COMMENT '创建人名称',
+                                            `MODIFY_USER_ID` varchar(32) DEFAULT NULL COMMENT '修改人ID',
+                                            `MODIFY_TIME` datetime DEFAULT NULL COMMENT '修改时间',
+                                            `MODIFY_USER_NAME` varchar(50) DEFAULT NULL COMMENT '修改人名称',
+                                            `IS_DELETE` tinyint(4) DEFAULT '0' COMMENT '删除标志',
+                                            `IS_FINAL` tinyint(4) DEFAULT '0' COMMENT '最终标志',
+                                                PRIMARY KEY (`IMPORT_DIRECT_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='员工直接上级导入信息';
