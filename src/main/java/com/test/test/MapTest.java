@@ -11,14 +11,20 @@ import com.study.Utils.InstantToStringUtils;
 import com.study.Utils.StringToInstantUtils;
 import com.test.test.bo.IamOrganizationBo;
 import io.swagger.models.auth.In;
+import kotlin.jvm.internal.CollectionToArray;
 import org.apache.ibatis.logging.stdout.StdOutImpl;
 import org.junit.Test;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.StringUtils;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -91,6 +97,16 @@ public class MapTest {
 
     }
 
+    @Test
+    public void test12212112() {
+//         Integer isFullTime =null;
+//        System.out.println(isFullTime == 1);
+//
+        Integer aa= null;
+        int bb= aa.intValue();
+
+    }
+
 
     @Test
     public void test112() {
@@ -105,11 +121,72 @@ public class MapTest {
     }
 
     @Test
-    public void test11112() {
-        List<String> longList = new ArrayList<>();
+    public void test12121112() {
+        Integer integer = dealSplitSize(11);
+        Integer integer1 = dealSplitSize(22);
+        Integer integer2 = dealSplitSize(33);
+        System.out.println(integer);
+        System.out.println(integer1);
+        System.out.println(integer2);
 
-        System.out.println(longList.contains("11"));
     }
+
+    /**
+     * 处理下载切片
+     * @param size
+     * @return
+     */
+    private Integer dealSplitSize(int size){
+        int splitSize = size / 20;
+        return size%20 > 0 ? splitSize +1: splitSize;
+    }
+
+
+
+
+
+
+
+    @Test
+    public void test112112() {
+        Object aaa="[\n" +
+                "        {\n" +
+                "            \"userId\":null,\n" +
+                "            \"empNo\":\"0000222\",\n" +
+                "            \"fullName\":\"张三\",\n" +
+                "            \"directSuperiorUserId\":null,\n" +
+                "            \"directSuperiorEmpNo\":\"5555000\",\n" +
+                "            \"directSuperiorFullName\":\"王五\",\n" +
+                "            \"rowNum\":1,\n" +
+                "            \"errorMsg\":\"人员信息库中不存在需修改直接上级的员工信息；人员信息库中不存在员工新直接上级信息\",\n" +
+                "            \"isRepeat\":1,\n" +
+                "            \"leaderFlag\":null\n" +
+                "        }\n" +
+                "    ]";
+        String jsonArryStr = (String) aaa;
+        System.out.println(jsonArryStr);
+    }
+
+    @Test
+    public void test11112() {
+        Long ori=1587354091594268674L;
+        Long des=1587354091594268674L;
+        System.out.println(ori == des);
+    }
+
+    @Test
+    public void test1221112() throws IOException {
+        //&#x521B;&#x5EFA;&#x5B57;&#x8282;&#x8F93;&#x51FA;&#x6D41;&#x5BF9;&#x8C61;
+        FileOutputStream fos = new FileOutputStream("fos3.txt");
+        //写入数据
+        for(int i=0; i<10; i++) {
+            fos.write(("Love"+i+"\r\n").getBytes());
+        }
+        //释放资源
+        fos.close();
+    }
+
+
     @Test
     public void test111112() {
         List<Integer> list = Arrays.asList(1, 2, 3);
@@ -857,13 +934,36 @@ public class MapTest {
 //        2022-11-28T07:11:03.875Z
 
 
-        for (int i = 0; i <0; i++) {
-            System.out.println(111);
+        Integer aa=null;
+        switch (aa){
+            case 1:
+                System.out.println(111);
+                break;
+            default:
+                System.out.println(212);
         }
-        System.out.println(333);
+    }
 
 
 
+    @Test
+    public void test0021(){
+        Student student = new Student();
+        student.setAge(11);
+        student.setName("22");
+        student.setLeader(true);
+        Student student1 = new Student();
+        student1.setAge(22);
+        student1.setName("2222");
+        student1.setLeader(false);
+        List<Student> aaa= new ArrayList<>();
+        aaa.add(student);
+        aaa.add(student1);
+        System.out.println(aaa);
+
+        student.setName("211111111111111112");
+        student.setLeader(false);
+        System.out.println(aaa);
     }
 
     private boolean isCheck(){
@@ -1000,6 +1100,44 @@ public class MapTest {
         System.out.println(testB);
 
     }
+    @Test
+    public void  test1121211(){
+        StringBuffer msg = new StringBuffer();
+        System.out.println(msg.toString());
+        msg.append("sss");
+        getMessage(msg);
+        System.out.println(msg);
+
+    }
+
+
+
+    private Boolean getMessage(StringBuffer aaa){
+
+        aaa.append("sdadsa");
+        return true;
+    }
+
+    @Test
+    public void  test121111(){
+
+        String aa="121";
+
+        switch (aa){
+            case "11":
+                System.out.println(111);
+                break;
+            case "22":
+                System.out.println(222);
+                break;
+            default:
+                System.out.println(2121);
+                return;
+        }
+        System.out.println(231);
+
+    }
+
 
 
     class  testA{
@@ -1102,6 +1240,107 @@ public class MapTest {
                     ", date=" + date +
                     '}';
         }
+    }
+
+    @Test
+    public void testString(){
+
+        List<String> ll  = new ArrayList<>();
+        addZbIdList( ll,",453809c749a544f9adf3da8a420b1a40,2a0bb7d836814129a9e9054d450290cc");
+        addZbIdList(ll ,",453809c749a544f9adf3da8a420b1a40,2a0bb7d836814129a9e9054d450290cc");
+
+        System.out.println(ll.stream().distinct().collect(Collectors.toList()));
+
+
+    }
+
+    @Test
+    public void testString111(){
+
+        List<String> ll  = new ArrayList<>();
+        ll.add("121");
+        List<String> ll1  = new ArrayList<>();
+        ll1.add("3212");
+        List<String> ll11  = new ArrayList<>();
+        List<String> ll111  = new ArrayList<>();
+        ll11.addAll(ll);
+        ll11.addAll(ll1);
+        ll11.addAll(ll111);
+        System.out.println(ll11);
+
+
+        System.out.println(ll.stream().distinct().collect(Collectors.toList()));
+
+
+    }
+
+
+    /**
+     * ,453809c749a544f9adf3da8a420b1a40,2a0bb7d836814129a9e9054d450290cc 对此格式进行操作
+     * @param list
+     * @param rcrwids
+     */
+    private void addZbIdList(List<String> list,String rcrwids){
+
+        if (StringUtils.isEmpty(rcrwids)){
+            return;
+        }
+        ArrayList<String> strings = StringToArrayList(rcrwids, ",");
+        System.out.println(strings);
+//        list.addAll(strings);
+
+    }
+
+    /**
+     * 根据字符串进行分割为list
+     * @param str
+     * @param separator
+     * @return
+     */
+    public static ArrayList<String> StringToArrayList(String str, String separator) {
+        ArrayList<String> arr = new ArrayList<String>();
+        if ((str == null) || (separator == null)) {
+            return arr;
+        }
+        StringTokenizer st = new StringTokenizer(str, separator);
+        while (st.hasMoreTokens()) {
+            arr.add(st.nextToken());
+        }
+        return arr;
+    }
+    
+    
+    
+    
+    
+    
+    public void mapHashMap(){
+        Map m = new HashMap();
+
+        m.put("11","22");
+
+        System.out.println(m.get("11"));
+
+
+
+
+    }
+
+    public static void main(String[] args) {
+
+
+        // 时间戳
+        long timestamp = 1476255956336769L;
+        // 获取Instant对象，这里需要注意时间戳的单位是毫秒，需要乘以1000
+        Instant instant = Instant.ofEpochMilli(timestamp);
+        // 转换为LocalDateTime对象
+        LocalDateTime date = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
+        // 定义日期时间格式
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        // 格式化日期
+        String formattedDate = date.format(formatter);
+        // 输出格式化后的日期
+        System.out.println(formattedDate);
     }
 
 

@@ -24,5 +24,10 @@ public class Student {
     boolean isLeader;
     boolean aeader;
     List<Long> longList;
+    Long id;
+    Double score;
+
+
+
 
 }

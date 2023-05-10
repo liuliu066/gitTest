@@ -14,6 +14,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/test/test/MapTest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/test/test/bo/IamOrganizationBo.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml" charset="UTF-8" />
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>
